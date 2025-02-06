@@ -1,0 +1,22 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+  case_sensitive = False
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    font = Monospace 9
+    foreground_color = "#ebdbb2"
+    scrollback_lines = 8000
+    palette = "#282828:#cc241d:#d79921:#d79921:#458588:#b16286:#56a14a:#a89984:#928374:#fb4934:#fabd2f:#fabd2f:#43999d:#d3869b:#67ba40:#ebdbb2"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
