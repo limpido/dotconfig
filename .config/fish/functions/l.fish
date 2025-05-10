@@ -1,3 +1,3 @@
-function l --wraps='eza --long -g -o --all' --wraps='eza --long -g -o' --description 'alias l eza --long -g -o'
-  eza --long -g -o --total-size $argv
+function l -d 'alias l eza --long --group --octal-permissions --total-size --all'
+    eza --long --group --octal-permissions --total-size --all $argv
 end

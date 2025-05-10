@@ -1,3 +1,3 @@
-function hgrep
-	history | grep $argv
+function hgrep -d "grep history"
+    history | grep $argv
 end
