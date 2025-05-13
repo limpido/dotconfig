@@ -45,12 +45,13 @@ symbol = ""
 style = 'bold fg:ss_color_orange'
 
 [git_status]
-ahead = "↑"
-behind = "↓"
-diverged = "↕"
-renamed = "»"
-deleted = "x"
-modified = "!"
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = "↑${ahead_count}↓${behind_count}"
+renamed = ""
+deleted = ""
+modified = ""
+staged = ""
 stashed = ""
 untracked = ""
 
