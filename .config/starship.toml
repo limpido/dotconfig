@@ -45,12 +45,14 @@ symbol = ""
 style = 'bold fg:ss_color_orange'
 
 [git_status]
-disabled = true
-ahead = ">"
-behind = "<"
-diverged = "<>"
-renamed = "r"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+renamed = "»"
 deleted = "x"
+modified = "!"
+stashed = ""
+untracked = ""
 
 ## dev-related symbols
 [aws]
