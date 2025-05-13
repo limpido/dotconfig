@@ -3,43 +3,46 @@
 palette = 'gruvbox_dark'
 
 [palettes.gruvbox_dark]
-color_fg0 = '#EBDBB2'
-color_bg1 = '#3c3836'
-color_bg3 = '#665c54'
-color_blue = '#458588'
-color_aqua = '#56A14A'
-color_green = '#56A14A'
-color_light_green = '#56A14A'
-color_orange = '#d65d0e'
-color_purple = '#b16286'
-color_red = '#cc241d'
-color_yellow = '#d79921'
+ss_color_fg0 = '#fbf1c7'
+ss_color_fg1 = '#ebdbb2'
+ss_color_blue = '#458588'
+ss_color_aqua = '#689d6a'
+ss_color_green = '#56A14A'
+ss_color_orange = '#d65d0e'
+ss_color_purple = '#b16286'
+ss_color_red = '#cc241d'
+ss_color_yellow = '#d79921'
+ss_color_cyan = '#52a1cb'
 
 [os]
 disabled = true
-style = "bg:color_orange fg:color_fg0"
 
 [username]
 show_always = true
-style_user = "bold fg:color_light_green"
+style_user = "bold fg:ss_color_green"
 
 [character]
-success_symbol = '[>](bold fg:color_green)'
-error_symbol = '[x](bold fg:color_red)'
-vimcmd_symbol = '[<](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[<](bold fg:color_purple)'
-vimcmd_replace_symbol = '[<](bold fg:color_purple)'
-vimcmd_visual_symbol = '[<](bold fg:color_yellow)'
+disabled = false
+success_symbol = '[>](bold fg:ss_color_fg1)'
+error_symbol = '[x](bold fg:ss_color_red)'
+vimcmd_symbol = '[<](bold fg:ss_color_green)'
+vimcmd_replace_one_symbol = '[<](bold fg:ss_color_purple)'
+vimcmd_replace_symbol = '[<](bold fg:ss_color_purple)'
+vimcmd_visual_symbol = '[<](bold fg:ss_color_yellow)'
 
 [directory]
-style = "bold fg:color_yellow"
+style = "bold fg:ss_color_yellow"
 
+[status]
+symbol = "[x](bold red) "
+
+## git
 [git_commit]
 tag_symbol = " tag "
 
 [git_branch]
 symbol = ""
-style = 'bold fg:color_orange'
+style = 'bold fg:ss_color_orange'
 
 [git_status]
 disabled = true
@@ -49,11 +52,12 @@ diverged = "<>"
 renamed = "r"
 deleted = "x"
 
+## dev-related symbols
 [aws]
 symbol = "aws "
 
 [azure]
-symbol = "az "
+symbol = "azure "
 
 [bun]
 symbol = "bun "
@@ -108,6 +112,7 @@ symbol = "gleam "
 
 [golang]
 symbol = "go "
+style = "bold ss_color_cyan"
 
 [gradle]
 symbol = "gradle "
@@ -120,12 +125,13 @@ symbol = "hg "
 
 [java]
 symbol = "java "
+style = "red bold"
 
 [julia]
-symbol = "jl "
+symbol = "julia "
 
 [kotlin]
-symbol = "kt "
+symbol = "kotlin "
 
 [lua]
 symbol = "lua "
@@ -149,7 +155,7 @@ symbol = "nim "
 symbol = "nix "
 
 [ocaml]
-symbol = "ml "
+symbol = "ocaml "
 
 [opa]
 symbol = "opa "
@@ -207,7 +213,7 @@ Windows = "win "
 symbol = "pkg "
 
 [perl]
-symbol = "pl "
+symbol = "perl "
 
 [php]
 symbol = "php "
@@ -231,10 +237,10 @@ symbol = "quarto "
 symbol = "raku "
 
 [ruby]
-symbol = "rb "
+symbol = "ruby "
 
 [rust]
-symbol = "rs "
+symbol = "rust "
 
 [scala]
 symbol = "scala "
@@ -244,9 +250,6 @@ symbol = "spack "
 
 [solidity]
 symbol = "solidity "
-
-[status]
-symbol = "[x](bold red) "
 
 [sudo]
 symbol = "sudo "
