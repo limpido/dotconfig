@@ -45,9 +45,9 @@ symbol = ""
 style = 'bold fg:ss_color_orange'
 
 [git_status]
-ahead = "⇡"
-behind = "⇣"
-diverged = "⇕"
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
 renamed = "»"
 deleted = "x"
 modified = "!"
