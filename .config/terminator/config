@@ -5,10 +5,15 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    font = Monospace 9
+    font = FiraCode Nerd Font Mono 9
     foreground_color = "#ebdbb2"
+    show_titlebar = False
     scrollback_lines = 8000
+    exit_action = restart
     palette = "#282828:#cc241d:#d79921:#d79921:#458588:#b16286:#56a14a:#a89984:#928374:#fb4934:#fabd2f:#fabd2f:#43999d:#d3869b:#67ba40:#ebdbb2"
+    login_shell = True
+    use_custom_command = True
+    custom_command = /usr/bin/fish
     use_system_font = False
 [layouts]
   [[default]]
