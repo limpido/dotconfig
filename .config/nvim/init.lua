@@ -1,3 +1,6 @@
+-- leader key
+vim.g.mapleader = ","
+
 -- plugins
 require('config.lazy')
 
@@ -36,6 +39,11 @@ vim.o.autoread = true
 -- enable 24-bit colour
 vim.opt.termguicolors = true
 
+-- always display tabline
+vim.o.showtabline = 2
+
+
+
 -- common Emacs-like editor hotkeys
 -- copy
 noremap('n', {'<C-c>', '<C-S-c>'}, '"+yy')
@@ -52,8 +60,8 @@ noremap('i', '<C-a>', '<esc>^i')
 noremap({'n', 'v'}, '<C-e>', '$')
 noremap('i', '<C-e>', '<esc>$a')
 -- delete word
-noremap('n', {'<C-w>', '<C-h>', '<C-bs>'}, 'vB"_d')
-noremap('i', {'<C-h>', '<C-bs>'}, '<C-w>')
+-- noremap('n', {'<C-w>', '<C-h>', '<C-bs>'}, 'vB"_d')
+-- noremap('i', {'<C-h>', '<C-bs>'}, '<C-w>')
 -- save
 noremap_all('<C-s>', '<cmd>wa<cr>')
 -- quit
@@ -63,7 +71,7 @@ noremap('n', '<C-f>', 'f')
 noremap('v', '<C-f>', [[y/\V<C-R>=escape(@",'/\')<cr><cr>]])
 -- undo / redo
 noremap_all('<C-z>', '<cmd>undo<cr>')
-noremap_all({'<C-y>', '<C-S-z>'}, '<cmd>redo<cr>')
+noremap_all('<C-S-z>', '<cmd>redo<cr>')
 -- backspace
 noremap('n', '<bs>', '"_dd')
 noremap('v', '<bs>', '"_d')
