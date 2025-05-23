@@ -1,9 +1,8 @@
--- leader key
-vim.g.mapleader = ","
-
 -- plugins
 require('config.lazy')
 
+
+-- util functions
 local function keymap(mode, lhs, rhs, options)
     if type(lhs) == 'table' then
         for _, key in pairs(lhs) do
@@ -24,6 +23,7 @@ local function noremap_all(lhs, rhs, options)
     noremap({'n', 'i', 'v'}, lhs, rhs, options)
 end
 
+
 -- general settings
 vim.o.mouse = 'a'
 vim.o.number = true
@@ -43,7 +43,6 @@ vim.opt.termguicolors = true
 vim.o.showtabline = 2
 
 
-
 -- common Emacs-like editor hotkeys
 -- copy
 noremap('n', {'<C-c>', '<C-S-c>'}, '"+yy')
@@ -54,14 +53,6 @@ noremap('v', '<C-x>', '"+d')
 -- paste
 noremap('n', '<C-v>', '"+p')
 noremap('n', '<C-S-v>', '"+p')
--- go to line begin / end
-noremap({'n', 'v'}, '<C-a>', '^')
-noremap('i', '<C-a>', '<esc>^i')
-noremap({'n', 'v'}, '<C-e>', '$')
-noremap('i', '<C-e>', '<esc>$a')
--- delete word
--- noremap('n', {'<C-w>', '<C-h>', '<C-bs>'}, 'vB"_d')
--- noremap('i', {'<C-h>', '<C-bs>'}, '<C-w>')
 -- save
 noremap_all('<C-s>', '<cmd>wa<cr>')
 -- quit
@@ -71,10 +62,7 @@ noremap('n', '<C-f>', 'f')
 noremap('v', '<C-f>', [[y/\V<C-R>=escape(@",'/\')<cr><cr>]])
 -- undo / redo
 noremap_all('<C-z>', '<cmd>undo<cr>')
-noremap_all('<C-S-z>', '<cmd>redo<cr>')
--- backspace
-noremap('n', '<bs>', '"_dd')
-noremap('v', '<bs>', '"_d')
+noremap_all('<C-A-z>', '<cmd>redo<cr>')
 -- shift indentation
 noremap('v', '<Tab>', '>gv')
 noremap('n', '<Tab>', '>>')
@@ -82,10 +70,19 @@ noremap('v', '<S-Tab>', '<gv')
 noremap('n', '<S-Tab>', '<<')
 noremap('i', '<S-Tab>', '<C-d>')
 -- swap lines
-noremap('n', '<A-Up>', 'ddkP')
-noremap('i', '<A-Up>', '<esc>ddkP')
-noremap('n', '<A-Down>', 'ddp')
-noremap('i', '<A-Down>', '<esc>ddp')
+noremap_all('<C-Up>', '<cmd>m -2<cr>')
+noremap_all('<C-Down>', '<cmd>m +1<cr>')
 -- select all
-noremap('n', '<A-a>', 'gg^vG$')
-noremap({'i', 'x', 'v'}, '<A-a>', '<esc>gg^vG$')
+noremap('n', '<C-a>', 'gg^vG$')
+noremap({'i', 'x', 'v'}, '<C-a>', '<esc>gg^vG$')
+-- delete line
+-- noremap('n', '<bs>', '"_dd')
+-- noremap('v', '<bs>', '"_d')
+-- go to line begin / end
+-- noremap({'n', 'v'}, '<C-a>', '^')
+-- noremap('i', '<C-a>', '<esc>^i')
+-- noremap({'n', 'v'}, '<C-e>', '$')
+-- noremap('i', '<C-e>', '<esc>$a')
+-- delete word
+-- noremap('n', {'<C-w>', '<C-h>', '<C-bs>'}, 'vB"_d')
+-- noremap('i', {'<C-h>', '<C-bs>'}, '<C-w>')
