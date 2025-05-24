@@ -1,37 +1,59 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = 'gruvbox_dark'
+palette = 'gruvbox_material_medium'
+
+[palettes.everforest]
+fg0 = '#d3c6aa'
+fg1 = '#ebdbb2'
+red = '#e67e80'
+orange = '#e69875'
+yellow = '#dbbc7f'
+green = '#a7c080'
+# green = '149'
+blue = '#7fbbb3'
+aqua = '#83c092'
+purple = '#d699b6'
+
+[palettes.gruvbox_material_medium]
+fg0 = '#d4be98'
+fg1 = '#ddc7a1'
+red = '#ea6962'
+orange = '#e78a4e'
+yellow = '#d8a657'
+green = '#a9b665'
+blue = '#7daea3'
+aqua = '#89b482'
+purple = '#d3869b'
 
 [palettes.gruvbox_dark]
-ss_color_fg0 = '#fbf1c7'
-ss_color_fg1 = '#ebdbb2'
-ss_color_blue = '#458588'
-ss_color_aqua = '#689d6a'
-ss_color_green = '#56A14A'
-ss_color_orange = '#d65d0e'
-ss_color_purple = '#b16286'
-ss_color_red = '#cc241d'
-ss_color_yellow = '#d79921'
-ss_color_cyan = '#52a1cb'
+fg0 = '#fbf1c7'
+fg1 = '#ebdbb2'
+blue = '#458588'
+aqua = '#689d6a'
+green = '#56A14A'
+orange = '#d65d0e'
+purple = '#b16286'
+red = '#cc241d'
+yellow = '#d79921'
 
 [os]
 disabled = true
 
 [username]
 show_always = true
-style_user = "bold fg:ss_color_green"
+style_user = "bold fg:green"
 
 [character]
 disabled = false
-success_symbol = '[>](bold fg:ss_color_fg1)'
-error_symbol = '[x](bold fg:ss_color_red)'
-vimcmd_symbol = '[<](bold fg:ss_color_green)'
-vimcmd_replace_one_symbol = '[<](bold fg:ss_color_purple)'
-vimcmd_replace_symbol = '[<](bold fg:ss_color_purple)'
-vimcmd_visual_symbol = '[<](bold fg:ss_color_yellow)'
+success_symbol = '[>](bold fg:green)'
+error_symbol = '[x](bold fg:red)'
+vimcmd_symbol = '[<](bold fg:green)'
+vimcmd_replace_one_symbol = '[<](bold fg:purple)'
+vimcmd_replace_symbol = '[<](bold fg:purple)'
+vimcmd_visual_symbol = '[<](bold fg:yellow)'
 
 [directory]
-style = "bold fg:ss_color_yellow"
+style = "bold fg:yellow"
 
 [status]
 symbol = "[x](bold red) "
@@ -42,7 +64,7 @@ tag_symbol = " tag "
 
 [git_branch]
 symbol = ""
-style = 'bold fg:ss_color_orange'
+style = 'bold fg:blue'
 
 [git_status]
 ahead = "↑${count}"
@@ -115,7 +137,7 @@ symbol = "gleam "
 
 [golang]
 symbol = "go "
-style = "bold ss_color_cyan"
+style = "bold blue"
 
 [gradle]
 symbol = "gradle "
