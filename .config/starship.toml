@@ -53,7 +53,7 @@ vimcmd_replace_symbol = '[<](bold fg:purple)'
 vimcmd_visual_symbol = '[<](bold fg:yellow)'
 
 [directory]
-style = "bold fg:yellow"
+style = "bold fg:blue"
 
 [status]
 symbol = "[x](bold red) "
@@ -64,7 +64,7 @@ tag_symbol = " tag "
 
 [git_branch]
 symbol = ""
-style = 'bold fg:blue'
+style = 'bold fg:yellow'
 
 [git_status]
 ahead = "↑${count}"
