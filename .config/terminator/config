@@ -5,12 +5,36 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    font = FiraCode Nerd Font Mono 9
     foreground_color = "#ebdbb2"
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    font = Ubuntu Mono 12
     show_titlebar = False
     scrollback_lines = 8000
     exit_action = restart
-    palette = "#282828:#cc241d:#d79921:#d79921:#458588:#b16286:#56a14a:#a89984:#928374:#fb4934:#fabd2f:#fabd2f:#43999d:#d3869b:#67ba40:#ebdbb2"
+    login_shell = True
+    use_custom_command = True
+    custom_command = /usr/bin/fish
+    use_system_font = False
+  [[everforest]]
+    background_color = "#1e2326"
+    foreground_color = "#d3c6aa"
+    palette = "#2e3436:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#9da9a0:#555753:#e69875:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    font = Ubuntu Mono 12
+    show_titlebar = False
+    scrollback_lines = 8000
+    exit_action = restart
+    login_shell = True
+    use_custom_command = True
+    custom_command = /usr/bin/fish
+    use_system_font = False
+  [[gruvbox-material]]
+    background_color = "#282828"
+    foreground_color = "#d4be98"
+    palette = "#282828:#ea6962:#a9b665:#d8a657:#7daea3:#d3869b:#89b482:#d4be98:#555753:#ea6962:#8ae234:#d8a657:#7daea3:#d3869b:#89b482:#ddc7a1"
+    font = Ubuntu Mono 12
+    show_titlebar = False
+    scrollback_lines = 8000
+    exit_action = restart
     login_shell = True
     use_custom_command = True
     custom_command = /usr/bin/fish
