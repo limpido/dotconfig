@@ -6,8 +6,10 @@ return {
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = {"c", "cpp", "python", "go", "rust", "javascript", "typescript", "lua", "yaml", "vim", "json",
-            "regex", "bash", "markdown", "markdown_inline", "latex", "make"},
+            ensure_installed = {"c", "cpp", "python", "go", "rust", "javascript", "typescript", "lua",
+		"toml", "yaml", "vim", "json", "regex", "markdown", "markdown_inline", "latex", "make",
+		"git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
+		"fish", "bash"},
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
