@@ -1,15 +1,15 @@
 function man --description 'color format manual pages'
     set -q man_blink; and set -l blink (set_color $man_blink); or set -l blink (set_color -o red)
-    set -q man_bold; and set -l bold (set_color $man_bold); or set -l bold (set_color -o 2AA1B3)
-    set -q man_standout; and set -l standout (set_color $man_standout); or set -l standout (set_color 949494)
-    set -q man_underline; and set -l underline (set_color $man_underline); or set -l underline (set_color -u FABD2F)
+    set -q man_bold; and set -l bold (set_color $man_bold); or set -l bold (set_color -o 7daea3)
+    set -q man_standout; and set -l standout (set_color $man_standout); or set -l standout (set_color d8a657)
+    set -q man_underline; and set -l underline (set_color $man_underline); or set -l underline (set_color -u a9b665)
 
     set -l end (printf "\e[0m")
 
     set -lx LESS_TERMCAP_mb $blink
     set -lx LESS_TERMCAP_md $bold
     set -lx LESS_TERMCAP_me $end
-    set -lx LESS_TERMCAP_so (set_color --reverse F0CB02)
+    set -lx LESS_TERMCAP_so (set_color --reverse a9b665)
     set -lx LESS_TERMCAP_se $end
     set -lx LESS_TERMCAP_us $underline
     set -lx LESS_TERMCAP_ue $end
