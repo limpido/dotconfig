@@ -41,3 +41,23 @@ end
 function tree
     eza --tree $argv
 end
+
+function rclone-pull
+    argparse d/dry-run -- $argv
+
+    if set -q _flag_dry_run
+	rclone sync remote:cs-books . --dry-run
+    else
+	rclone sync remote:cs-books .
+    end
+end
+
+function rclone-push
+    argparse d/dry-run -- $argv
+
+    if set -q _flag_dry_run
+	rclone sync . remote:cs-books --dry-run
+    else
+	rclone sync . remote:cs-books
+    end
+end
