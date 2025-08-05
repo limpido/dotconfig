@@ -34,7 +34,7 @@ end
 
 
 function la
-    l -a
+    l -a $argv
 end
 
 
