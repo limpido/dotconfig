@@ -5,16 +5,17 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    font = JetBrainsMonoNL Nerd Font Mono 10
+    font = JetBrainsMono Nerd Font Medium 9
     foreground_color = "#ebdbb2"
     show_titlebar = False
-    scrollback_lines = 8000
+    scrollback_lines = 30000
     exit_action = restart
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#282828:#b9443d:#a9b665:#d8a657:#4a8a8a:#d3869b:#89b482:#dec8a3:#555753:#ea6962:#a9b665:#d8a657:#7daea3:#d3869b:#89b482:#ddc7a1"
     login_shell = True
     use_custom_command = True
     custom_command = /usr/bin/fish
     use_system_font = False
+    bold_is_bright = True
   [[everforest]]
     background_color = "#1e2326"
     font = Ubuntu Mono 12
